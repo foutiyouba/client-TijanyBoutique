@@ -14,6 +14,13 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+import { ClasseComponent } from './classe/classe.component';
+import { EtudiantComponent } from './etudiant/etudiant.component';
+import {HttpClientModule} from "@angular/common/http";
+import {ReactiveFormsModule} from "@angular/forms";
+import {RouterModule} from "@angular/router";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
 
 @NgModule({
   declarations: [
@@ -22,6 +29,8 @@ import { MatListModule } from '@angular/material/list';
     HomeComponent,
     DashboardComponent,
     SidenavComponent,
+    ClasseComponent,
+    EtudiantComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +43,11 @@ import { MatListModule } from '@angular/material/list';
     MatIconModule,
     MatDividerModule,
     MatListModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatButtonToggleModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
