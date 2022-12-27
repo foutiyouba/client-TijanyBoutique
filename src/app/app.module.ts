@@ -14,13 +14,25 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
-import { ClasseComponent } from './classe/classe.component';
-import { EtudiantComponent } from './etudiant/etudiant.component';
 import {HttpClientModule} from "@angular/common/http";
 import {ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import {MatButtonModule} from "@angular/material/button";
+import { ClientComponent } from './client/client.component';
+import { CommandesComponent } from './commandes/commandes.component';
+import { TypeJellabeComponent } from './type-jellabe/type-jellabe.component';
+import {MatInputModule} from "@angular/material/input";
+import {MatSelectModule} from "@angular/material/select";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatTableModule} from "@angular/material/table";
+import {MatCardModule} from "@angular/material/card";
+import {MatTabsModule} from "@angular/material/tabs";
+import {MatGridListModule} from "@angular/material/grid-list";
+import { CommandesListComponent } from './commandes-list/commandes-list.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [
@@ -29,8 +41,10 @@ import {MatButtonToggleModule} from "@angular/material/button-toggle";
     HomeComponent,
     DashboardComponent,
     SidenavComponent,
-    ClasseComponent,
-    EtudiantComponent,
+    ClientComponent,
+    CommandesComponent,
+    TypeJellabeComponent,
+    CommandesListComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +62,16 @@ import {MatButtonToggleModule} from "@angular/material/button-toggle";
     MatFormFieldModule,
     MatButtonToggleModule,
     RouterModule,
+    MatButtonModule,
+    MatInputModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatCheckboxModule,
+    MatTableModule,
+    MatCardModule,
+    MatTabsModule,
+    MatGridListModule,
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
