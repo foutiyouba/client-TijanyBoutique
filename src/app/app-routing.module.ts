@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import {ClientComponent} from "./client/client.component";
 import {CommandesComponent} from "./commandes/commandes.component";
 import {TypeJellabeComponent} from "./type-jellabe/type-jellabe.component";
+import {LoginComponent} from "./login/login.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'clients', component: ClientComponent },
   { path: 'commandes', component: CommandesComponent },
   { path: 'jellabes', component: TypeJellabeComponent },
+  { path: "login", component: LoginComponent },
 
 ];
 
@@ -21,4 +23,5 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
+
 

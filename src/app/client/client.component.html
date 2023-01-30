@@ -3,36 +3,75 @@
   <div class="page__content shadow p-3 position-relative">
     <div class="page__content-data position-absolute text-center">
     </div>
+
+
+    <form [formGroup]="clientForm">
     <p>
       <mat-form-field appearance="outline">
         <mat-label>Prénom</mat-label>
-        <input matInput placeholder="Prénom">
+        <input matInput placeholder="Prénom" formControlName="prenomClient">
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         <mat-hint>Hint</mat-hint>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Nom</mat-label>
-        <input matInput placeholder="Nom">
+        <input matInput placeholder="Nom" formControlName="nomClient">
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
       </mat-form-field>
 
 
       <mat-form-field appearance="outline">
         <mat-label>Numero Telephone</mat-label>
-        <input matInput placeholder="Numero Telephone">
+        <input matInput placeholder="Numero Telephone" formControlName="telephoneClient">
         <mat-icon matSuffix>contact_phone</mat-icon>
       </mat-form-field>
     </p>
 
     <p>
       <mat-form-field appearance="outline">
-        <mat-label>Localite</mat-label>
-        <input matInput placeholder="Localite">
+        <mat-label>Adresse</mat-label>
+        <input matInput placeholder="Adresse" formControlName="adresseClient">
         <mat-icon matSuffix> location_on</mat-icon>
       </mat-form-field>
 
-      <button class="unpeu" mat-raised-button color="primary"><mat-icon>save</mat-icon>Nouveau Client</button>
+      <button class="unpeu" mat-raised-button color="primary" [disabled]="!clientForm.valid" (click)="save()"><mat-icon>save</mat-icon>Nouveau Client</button>
     </p>
+    </form>
   </div>
+
+  <article class="panel is-info" *ngIf="mode==1">
+    <p class="panel-heading">
+      Client Enregistré
+    </p>
+
+    <div class="panel-block" *ngIf="result">
+       <div class="is-5">
+        <div class="column">
+          <label>PRENOM : </label>
+          <strong> {{result.prenom}}</strong>
+        </div>
+
+         <div class="column">
+           <label>NOM : </label>
+           <strong> {{result.nom}}</strong>
+         </div>
+       </div>
+
+      <div class="is-5">
+        <div class="column">
+          <label>TELEPHONE : </label>
+          <strong> {{result.telephone}}</strong>
+        </div>
+
+        <div class="column">
+          <label>ADRESSE : </label>
+          <strong> {{result.adresse}}</strong>
+        </div>
+      </div>
+
+
+    </div>
+
+  </article>
 </div>

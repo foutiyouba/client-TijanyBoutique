@@ -1,11 +1,11 @@
 <div class="grid-container">
   <h1 class="mat-h1">Dashboard</h1>
+
   <mat-grid-list cols="2" rowHeight="350px">
     <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
       <mat-card class="dashboard-card">
         <mat-card-header>
           <mat-card-title>
-            {{card.title}}
             <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
               <mat-icon>more_vert</mat-icon>
             </button>
@@ -15,8 +15,78 @@
             </mat-menu>
           </mat-card-title>
         </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
+        <mat-card-content class="dashboard-card">
+          <div>
+            <form  [formGroup]="searchForm">
+            <div class="col-lg-6">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Rechercher numero" formControlName="search" >
+                <span class="input-group-btn">
+                 <button class="btn btn-primary" type="button" (click)="recherche()">Go!</button>
+                </span>
+              </div>
+            </div>
+            </form>
+
+
+            <table class="table is-striped" *ngIf="ok==1">
+              <thead>
+              <tr>
+                <th>PRENOM</th>
+                <th>TELEPHONE</th>
+                <th>JELABE</th>
+                <th>PRIX</th>
+                <th></th>
+
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td><strong>{{donnee.client.prenom}}</strong></td>
+                <td><strong>{{donnee.client.telephone}}</strong></td>
+                <td><strong>{{donnee.nomJellabe}}</strong></td>
+                <td><strong>{{donnee.prix}}</strong></td>
+                <td>
+                  <a (click)="modifier(donnee.meta.uid)"><mat-icon>create</mat-icon></a>
+                  <a (click)="supprimer(donnee.meta.uid)"><mat-icon>delete</mat-icon></a>
+                </td>
+              </tr>
+
+              </tbody>
+            </table>
+
+            <table class="table is-striped" *ngIf="mode==1">
+
+              <thead>
+              <tr>
+                <th>PRENOM</th>
+                <th>TELEPHONE</th>
+                <th>JELABE</th>
+                <th>PRIX</th>
+                <th></th>
+
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let c of donnee">
+                <td><strong>{{c.client.prenom}}</strong></td>
+                <td><strong>{{c.client.telephone}}</strong></td>
+                <td><strong>{{c.nomJellabe}}</strong></td>
+                <td><strong>{{c.prix}}</strong></td>
+                <td>
+                  <a (click)="modifier(c.meta.uid)"><mat-icon>create</mat-icon></a>
+                  <a (click)="supprimer(c.meta.uid)"><mat-icon>delete</mat-icon></a>
+                </td>
+              </tr>
+
+
+              </tbody>
+
+            </table>
+
+
+
+          </div>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>

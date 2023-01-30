@@ -15,7 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import {HttpClientModule} from "@angular/common/http";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormGroup, FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
@@ -33,6 +33,9 @@ import {MatTabsModule} from "@angular/material/tabs";
 import {MatGridListModule} from "@angular/material/grid-list";
 import { CommandesListComponent } from './commandes-list/commandes-list.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { LoginComponent } from './login/login.component';
+import {Ng2SearchPipeModule} from "ng2-search-filter";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 @NgModule({
   declarations: [
@@ -45,6 +48,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     CommandesComponent,
     TypeJellabeComponent,
     CommandesListComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,6 +61,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatIconModule,
     MatDividerModule,
     MatListModule,
+
     HttpClientModule,
     ReactiveFormsModule,
     MatFormFieldModule,
@@ -72,6 +77,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatTabsModule,
     MatGridListModule,
     LayoutModule,
+    FormsModule,
+    MatProgressSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
