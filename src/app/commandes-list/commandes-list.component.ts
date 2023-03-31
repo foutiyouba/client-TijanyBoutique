@@ -83,17 +83,22 @@ export class CommandesListComponent {
   }
 
   supprimer(uid) {
+    var res=confirm("Etes vous sur de supprimé ?");
 
-    const commande = {
-          meta:{
-             uid:uid
-              }}
-    this.service.delete(commande).subscribe(res=>{
-      console.log("l'element  a ete bien supprime", res);
-      this.router.navigateByUrl("/home")
+    if (res)
+    {
+      const commande = {
+        meta:{
+          uid:uid
+        }}
+      this.service.delete(commande).subscribe(res=>{
+        console.log("l'element  a ete bien supprime", res);
+        this.router.navigateByUrl("/home")
 
-    }),
-      (err: any) => console.log(err)
+      }),
+        (err: any) => console.log(err)
+    }
+
   }
 
   modifier(uid) {
