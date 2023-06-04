@@ -1,0 +1,126 @@
+<div class="container-fluid page">
+  <div class="d-flex page__box p-3 mt-2"><strong>Liste des Fournisseurs</strong></div>
+
+  <div class="page__content shadow p-3">
+    <div class="page__content-data position-absolute text-center">
+    </div>
+    <ul class="nav nav-pills">
+      <li role="presentation" class="active"><a href="">Mes Fournisseurs</a></li>
+      <li role="presentation"><a routerLink="/">Fournisseur</a></li>
+      <form  [formGroup]="searchForm">
+        <div class="col-md-12">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Rechercher" formControlName="search" >
+            <span class="input-group-btn">
+                 <button class="btn btn-primary" type="button" (click)="recherche()">Go!</button>
+                </span>
+          </div>
+        </div>
+      </form>
+    </ul>
+
+  </div>
+</div>
+
+
+<!--
+
+<div class="col-md-7 col-lg-offset-2">
+  <div class="panel panel-primary body">
+    <div class="panel-heading titre">Profil Du Restaurant</div>
+    <div class="panel-body">
+
+
+
+      <table class="table is-striped" *ngIf="result">
+
+        <thead>
+        <tr>
+          <th>NOM</th>
+          <th>PRODUIT</th>
+          <th>TELEPHONE</th>
+          <th>ADRESSE</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let c of result"> &lt;!&ndash;*ngFor="let c of result"&ndash;&gt;
+          <td><strong>{{c.nomFournisseur}}</strong></td>
+          <td><strong>{{c.produit}}</strong></td>
+          <td><strong>{{c.telephone}}</strong></td>
+          <td><strong>{{c.adresse}}</strong></td>
+        </tr>
+
+
+        </tbody>
+
+      </table>
+
+
+
+    </div>
+    </div>
+  </div>
+-->
+
+<div class="col-md-9"  *ngIf="mode==0">
+  <div class="body">
+  <table class="table is-striped" *ngIf="result">
+
+    <thead>
+    <tr>
+      <th>NOM</th>
+      <th>PRODUIT</th>
+      <th>TELEPHONE</th>
+      <th>ADRESSE</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let c of result"> <!--*ngFor="let c of result"-->
+      <td><strong>{{c.nomFournisseur}}</strong></td>
+      <td><strong>{{c.produit}}</strong></td>
+      <td><strong>{{c.telephone}}</strong></td>
+      <td><strong>{{c.adresse}}</strong></td>
+    </tr>
+
+
+    </tbody>
+
+  </table>
+
+
+</div>
+</div>
+
+
+<div class="col-md-9"  *ngIf="mode==1">
+  <div class="body">
+    <table class="table is-striped" *ngIf="result">
+
+      <thead>
+      <tr>
+        <th>NOM</th>
+        <th>PRODUIT</th>
+        <th>TELEPHONE</th>
+        <th>ADRESSE</th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let c of result"> <!--*ngFor="let c of result"-->
+        <td><strong>{{c.nomFournisseur}}</strong></td>
+        <td><strong>{{c.produit}}</strong></td>
+        <td><strong>{{c.telephone}}</strong></td>
+        <td><strong>{{c.adresse}}</strong></td>
+      </tr>
+
+
+      </tbody>
+
+    </table>
+
+
+  </div>
+</div>
+

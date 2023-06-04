@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl, FormGroup, Validators } from '@angular/forms';
 import {Router} from "@angular/router";
 import {ServicesService} from "../service/services.service";
 
@@ -12,6 +13,10 @@ export class HomeComponent implements OnInit {
 
   public result={};
   public mode=0;
+  searchForm=new FormGroup({
+
+    search: new FormControl('', [Validators.required, Validators.max(30)]),
+  });
   constructor(private routes:Router, private service:ServicesService) { }
 
   ngOnInit(): void {
@@ -41,6 +46,9 @@ export class HomeComponent implements OnInit {
   }
 
 
+  recherche() {
+
+  }
 }
 
 

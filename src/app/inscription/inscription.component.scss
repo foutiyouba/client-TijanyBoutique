@@ -1,15 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap');
 
-img{
-  height:200px;
-  widht:200px;
-  padding-top:10%;
 
-}
-.desc{
-  margin-top: 75px;
-  margin-left: 150px;
-}
 
 ul.li{
   display: flex;
@@ -24,8 +15,8 @@ label{
 .nav{
   position: absolute;
   display:flex;
- // background-color: #0B5198;
-   background-color: #1355AF;
+  // background-color: #0B5198;
+  background-color: #1355AF;
   justify-content: space-between;
   margin-left: 23%;
   margin-top: 10px;
@@ -37,15 +28,53 @@ a{
   color: #252526;
   font-family: 'Source Sans Pro', sans-serif;
 }
-
+/*
 .images img{
   width: 50%;
   margin-left: 20px;
   position: fixed;
   margin-bottom: -5%;
-}
+}*/
 
 button{
-  margin-top: 5%;
+  margin-top:1%;
   font-size: 1.5rem;
 }
+
+img{
+  height:50%;
+  widht:50%;
+  padding-top:8%;
+
+}
+.tof{
+  height:70%;
+  widht:70%;
+  position: fixed;
+  margin-left:1%;
+  padding-top: 10%;
+}
+.images img{
+  width: 50%;
+  margin-left:5%;
+  position: fixed;
+}
+
+
+
+form{
+  margin-top: 5%;
+  margin-left: 25%;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+form input{
+  border-radius: 30px;
+}
+form button{
+  border-radius: 30px;
+  margin-top:1%;
+  color: #252526;
+  background-color: #0B5198;
+  /*background-color: #1C94C8;*/
+}
+

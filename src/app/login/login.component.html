@@ -3,29 +3,30 @@
 <head>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hello Bulma!</title>
+<title>Restaurant Fournisseur !</title>
 </head>
 <body>
-
 <div class="column is-8 is-offset-one-quarter desc">
 
-  <form class="box column is-two-fifths is-offset-4">
+  <form [formGroup]="loginForm" class="box column is-two-fifths is-offset-4">
    <img src="../../assets/static/img.svg">
+
     <div class="field">
-      <label class="label">Email</label>
       <div class="control">
-        <input class="input" type="email" placeholder="alex@example.com">
+        <label>Email</label>
+        <input class="input is-medium is-info" type="email" formControlName="username" placeholder="alex@example.com">
       </div>
     </div>
 
     <div class="field">
-      <label class="label">Password</label>
       <div class="control">
-        <input class="input" type="password" placeholder="********">
+       <label>Password</label>
+        <input class="input is-medium is-info" type="password"  formControlName="password"placeholder="********">
       </div>
     </div>
+    <a routerLink="/"><span>créer un compte ?</span></a>
     <div class="field is-grouped is-grouped-centered">
-      <button class="button is-black" (click)="login()">Connexion</button>
+      <button class="button is-medium is-black" (click)="login()">Connexion</button>
     </div>
 
   </form>

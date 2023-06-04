@@ -1,0 +1,93 @@
+<section>
+  <nav>
+    <ul class="nav">
+      <li><a routerLink="/login">Accueil</a></li>
+      <li><a routerLink="/" class="active">Fournisseur</a></li>
+      <li><a routerLink="/" class="active">Restaurant</a></li>
+      <li><a routerLink="/" class="active" href="#">A propos</a></li>
+    </ul>
+  </nav>
+</section>
+
+<div class="column is-8 is-offset-one-quarter desc">
+
+  <div class="tof">
+    <img src="./assets/static/business.svg">
+  </div>
+<div class="images">
+  <img src="./assets/static/breakfast.svg">
+</div>
+</div>
+<form>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label>Nom du Fournisseur</label>
+        <input type="email" class="form-control" placeholder="Nom du Fournisseur">
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label>Adresse</label>
+        <input type="email" class="form-control" placeholder="Adresse">
+      </div>
+    </div>
+  </div>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" class="form-control" placeholder="Email">
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="form-group">
+      <label>Telephone</label>
+      <input type="email" class="form-control" placeholder="70 775 00 00">
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label>Produit à Vendre</label>
+        <input type="email" class="form-control" placeholder="Produit à Vendre">
+      </div>
+    </div>
+    <div class="col-md-4">
+        <label>Role</label>
+     <select class="form-control">
+          <option *ngFor="let c of roles">{{c.nameRole}}</option>
+     </select>
+
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label>Username</label>
+        <input type="email" class="form-control" placeholder="Username">
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" placeholder="Password">
+      </div>
+    </div>
+  </div>
+
+ <button type="submit" class="btn btn-default block" routerLink="/acc">Confirmer</button>
+</form>
+
+
+
+
+

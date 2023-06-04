@@ -22,7 +22,6 @@ import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import {MatButtonModule} from "@angular/material/button";
 import { ClientComponent } from './client/client.component';
 import { CommandesComponent } from './commandes/commandes.component';
-import { TypeJellabeComponent } from './type-jellabe/type-jellabe.component';
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
 import {MatDatepickerModule} from "@angular/material/datepicker";
@@ -36,6 +35,12 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { LoginComponent } from './login/login.component';
 import {Ng2SearchPipeModule} from "ng2-search-filter";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import { FournisseurComponent } from './fournisseur/fournisseur.component';
+import { RestaurantComponent } from './restaurant/restaurant.component';
+import { ProfilComponent } from './profil/profil.component';
+import { InscriptionComponent } from './inscription/inscription.component';
+import { AccueilComponent } from './accueil/accueil.component';
+import { SearchFilterPipe } from './search-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -46,9 +51,14 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
     SidenavComponent,
     ClientComponent,
     CommandesComponent,
-    TypeJellabeComponent,
     CommandesListComponent,
     LoginComponent,
+    FournisseurComponent,
+    RestaurantComponent,
+    ProfilComponent,
+    InscriptionComponent,
+    AccueilComponent,
+    SearchFilterPipe,
   ],
   imports: [
     BrowserModule,
